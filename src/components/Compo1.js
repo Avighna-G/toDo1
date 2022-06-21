@@ -22,7 +22,7 @@ function Compo1()
     return(
         <div className="mt-5">
             
-                <form id="addtaskbody" className="w-50 mx-auto shadow p-2 rounded" onSubmit={handleSubmit(onFormSubmit)}>
+                <form id="addtaskbody" className="w-50 mx-auto shadow-3 p-2 rounded" onSubmit={handleSubmit(onFormSubmit)}>
                     <div className="row">
                         <div className="col-10">
                             <input type="text" id="task" className="form-control" {...register("task",{required:true})} placeholder="Enter Your Task..."></input>
@@ -36,11 +36,11 @@ function Compo1()
                     </div>
                 </form>
             
-            <div className="container">
-            {initList.length==0 && <h2 className='mx-auto text-center m-3 text-primary'> No Pending Tasks! </h2>}
+            <div>
+            {initList.length==0 && <h2 className='mx-auto text-center p-3 text-light'> No Pending Tasks! </h2>}
             {initList.length!==0 &&
             <div className='text-center'>
-                <table className='mx-auto text-center mt-3 w-50 shadow' id="tsktable">
+                <table className='mx-auto text-center mt-3 w-50 shadow-3 rounded' id="tsktable">
                     <thead className='th'>
                         <tr>
                             <th>serial</th>
